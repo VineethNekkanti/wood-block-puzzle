@@ -10,6 +10,9 @@ body {
     min-height: 100vh;
     color: #2C1810;
     overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
 }
 
 .game-container {
@@ -349,31 +352,121 @@ body {
             "header"
             "main"
             "sidebar";
+        padding: 10px;
+        gap: 15px;
     }
     
     .game-header {
         flex-direction: column;
         gap: 15px;
         text-align: center;
+        padding: 15px;
     }
     
     .game-header h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        margin: 0;
     }
     
-    #gameBoard {
-        width: 350px;
-        height: 350px;
+    .score-display {
+        padding: 10px 20px;
+        font-size: 1rem;
     }
     
-    .blocks-row {
-        flex-direction: column;
+    .game-main {
         gap: 15px;
     }
     
+    .game-board-container {
+        padding: 15px;
+    }
+    
+    #gameBoard {
+        width: 100%;
+        max-width: 350px;
+        height: 350px;
+    }
+    
+    .blocks-container {
+        padding: 15px;
+    }
+    
+    .blocks-row {
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    
     .block {
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
+        flex-shrink: 0;
+    }
+    
+    .game-sidebar {
+        gap: 15px;
+    }
+    
+    .leaderboard, .controls, .audio-controls {
+        padding: 15px;
+    }
+    
+    .leaderboard h3, .controls h3 {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+    
+    .controls p {
+        font-size: 0.85rem;
+        margin: 6px 0;
+    }
+    
+    .audio-controls button {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .game-container {
+        padding: 5px;
+        gap: 10px;
+    }
+    
+    .game-header {
+        padding: 10px;
+    }
+    
+    .game-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .game-board-container {
+        padding: 10px;
+    }
+    
+    #gameBoard {
+        max-width: 300px;
+        height: 300px;
+    }
+    
+    .blocks-container {
+        padding: 10px;
+    }
+    
+    .blocks-row {
+        gap: 8px;
+    }
+    
+    .block {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .leaderboard, .controls, .audio-controls {
+        padding: 10px;
     }
 }
 
