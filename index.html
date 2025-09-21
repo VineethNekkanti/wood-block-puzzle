@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wood Block Puzzle</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <header class="game-header">
+            <h1>Wood Block Puzzle</h1>
+            <div class="score-display">
+                <span>Score: <span id="score">0</span></span>
+            </div>
+        </header>
+        
+        <main class="game-main">
+            <div class="game-board-container">
+                <canvas id="gameBoard" width="450" height="450"></canvas>
+                <div class="game-overlay" id="gameOverlay" style="display: none;">
+                    <div class="game-over-content">
+                        <h2>Game Over!</h2>
+                        <p>Final Score: <span id="finalScore">0</span></p>
+                        <div id="leaderboardEntry" style="display: none;">
+                            <p>Congratulations! You made it to the top 5!</p>
+                            <input type="text" id="playerName" placeholder="Enter your name" maxlength="20">
+                            <button id="saveScore">Save Score</button>
+                        </div>
+                        <button id="restartGame">Play Again</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="blocks-container">
+                <h3>Next Blocks</h3>
+                <div class="blocks-row" id="blocksRow">
+                    <!-- Blocks will be dynamically generated here -->
+                </div>
+            </div>
+        </main>
+        
+        <aside class="game-sidebar">
+            <div class="leaderboard">
+                <h3>Leaderboard</h3>
+                <ol id="leaderboardList">
+                    <!-- Leaderboard entries will be populated here -->
+                </ol>
+            </div>
+            
+            <div class="controls">
+                <h3>Controls</h3>
+                <p>• Drag blocks to place them</p>
+                <p>• Complete lines to score points</p>
+                <p>• Fill the board to continue</p>
+            </div>
+            
+            <div class="audio-controls">
+                <button id="toggleMusic">🎵 Music: ON</button>
+                <button id="toggleSound">🔊 Sound: ON</button>
+            </div>
+        </aside>
+    </div>
+    
+    <audio id="backgroundMusic" loop>
+        <source src="assets/relaxing-guitar.mp3" type="audio/mp3">
+    </audio>
+    <audio id="blockPlaceSound">
+        <source src="assets/block-place.wav" type="audio/wav">
+    </audio>
+    <audio id="lineClearSound">
+        <source src="assets/line-clear.wav" type="audio/wav">
+    </audio>
+    
+    <script src="game.js"></script>
+</body>
+</html>

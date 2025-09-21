@@ -1,0 +1,52 @@
+{
+  "name": "wood-block-puzzle",
+  "version": "1.0.0",
+  "description": "A beautiful wood-themed block puzzle game with drag-and-drop mechanics",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "serve": "python -m http.server 8000",
+    "cordova:android": "cordova run android",
+    "cordova:build": "cordova build android",
+    "cordova:prepare": "cordova prepare",
+    "cordova:platform": "cordova platform add android",
+    "cordova:plugin": "cordova plugin add cordova-plugin-whitelist cordova-plugin-statusbar cordova-plugin-device cordova-plugin-splashscreen"
+  },
+  "keywords": [
+    "puzzle",
+    "game",
+    "block-puzzle",
+    "tetris",
+    "wood-theme",
+    "html5",
+    "javascript",
+    "canvas",
+    "cordova",
+    "phonegap",
+    "android"
+  ],
+  "author": "Wood Block Puzzle Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/wood-block-puzzle.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/wood-block-puzzle/issues"
+  },
+  "homepage": "https://github.com/your-username/wood-block-puzzle#readme",
+  "devDependencies": {
+    "cordova": "^11.0.0"
+  },
+  "cordova": {
+    "platforms": [
+      "android"
+    ],
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-splashscreen": {}
+    }
+  }
+}
